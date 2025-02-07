@@ -201,11 +201,17 @@ Throws an exception if the API is down.
 
 The Circuit Breaker in CbController prevents multiple failed calls from overloading the service. 
 
- **Response (When Downstream API is up and running fine)** 
- 
+**Summary**
 
+1.Circuit breaker starts in Closed state.
 
-![Alt text](Images/Screenshot (34).png)
+2.If more than 50% of last 10 requests fail, it opens for 5 seconds.
+
+3.During Open state, requests are immediately rejected and fallback is called.
+
+4.After 5 seconds, it moves to Half-Open and allows 3 test requests.
+
+5.If those succeed, it goes back to Closed, else it stays Open.
 
 
 
