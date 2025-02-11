@@ -20,7 +20,7 @@ When the monitored metrics breach predetermined thresholds, signaling potential 
 
 **Project Structure** 
 
-src/main/java/com/example/circuitbreaker/ 
+src/main/java/com/example/circuitbreaker
  
 │── CircuitGradleApplication.java   # Main application class 
 
